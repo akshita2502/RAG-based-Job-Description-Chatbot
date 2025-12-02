@@ -3,6 +3,11 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Data Storage (Ignore these so they are never uploaded to Git)
+storage/
+chroma_store/
+*.sqlite3
+
 # C extensions
 *.so
 

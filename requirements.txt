@@ -1,0 +1,50 @@
+# -----------------------------------------------
+# FASTAPI BACKEND
+# -----------------------------------------------
+fastapi
+uvicorn[standard]
+
+# -----------------------------------------------
+# STREAMLIT FRONTEND
+# -----------------------------------------------
+streamlit
+
+# -----------------------------------------------
+# DOCUMENT PROCESSING
+# -----------------------------------------------
+pdfplumber
+python-docx
+
+# -----------------------------------------------
+# VECTOR EMBEDDINGS (Sentence Transformers)
+# -----------------------------------------------
+sentence-transformers
+torch   # CPU version; auto-installs
+
+# -----------------------------------------------
+# VECTOR DATABASE (Chroma)
+# -----------------------------------------------
+chromadb
+
+# -----------------------------------------------
+# POSTGRES DATABASE & ORM
+# -----------------------------------------------
+sqlalchemy
+psycopg2-binary
+alembic
+
+# -----------------------------------------------
+# GEMINI API CLIENT
+# -----------------------------------------------
+google-generativeai
+
+# -----------------------------------------------
+# UTILITIES & HELPERS
+# -----------------------------------------------
+python-dotenv
+pydantic
+pydantic-settings
+requests
+orjson        # optional (fast JSON)
+python-multipart
+asyncpg
