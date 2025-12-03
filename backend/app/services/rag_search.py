@@ -29,3 +29,17 @@ def rag_retrieve(query: str, job_id: Optional[str] = None):
         docs = results["documents"][0]
     
     return docs
+
+def get_document_text(job_id: str):
+    """Fetch all text chunks for a specific job_id to analyze the full document."""
+    result = collection.get(
+        where={"job_id": job_id}
+    )
+    
+    if result and "documents" in result and result["documents"]:
+        # Join all chunks to form the full text
+        # Documents are returned as strings by Chroma
+        docs = result["documents"]
+        if docs:
+            return "\n\n".join(str(doc) for doc in docs)
+    return ""
