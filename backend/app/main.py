@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import upload, query, jobs, health
+from app.api import upload, query, jobs, health, score
 
 app = FastAPI(title="RAG Job Description Chatbot API")
 
@@ -17,6 +17,7 @@ app.include_router(upload.router, prefix="/upload", tags=["Upload"])
 app.include_router(query.router, prefix="/query", tags=["Chat"])
 app.include_router(jobs.router, prefix="/jobs", tags=["Jobs"])
 app.include_router(health.router, prefix="/health", tags=["Health"])
+app.include_router(score.router, prefix="/score", tags=["ATS Score"])
 
 @app.get("/")
 def root():
